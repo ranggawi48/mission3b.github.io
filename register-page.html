@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHILL</title>
+    <link rel="shortcut icon" type="image/png" href="./image/movie-open.png" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-register">
+    <div class="form-container">
+        <img src="./image/logo.png" width="130" alt="Logo" class="logo">
+        <h3>Daftar</h3>
+        <h6 class="body-small-medium">Selamat datang!</h6>
+        <class="form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Masukan username" autocomplete="off">
+            </div>
+            <div class="input-password">
+                <label for="password">Kata Sandi</label>
+                <div class="password-container">
+                    <input type="password" name="password" id="password" class="password-input"
+                        placeholder="Masukan kata sandi">
+                    <img src="./icon/hidden.png" class="eyeicon" data-target="#password">
+                </div>
+            </div>
+            <div class="input-password">
+                <label for="confirm-password">Konfirmasi Kata Sandi</label>
+                <div class="password-container">
+                    <input type="password" name="confirm-password" id="confirm-password" class="password-input"
+                        placeholder="Masukan kata sandi">
+                    <img src="./icon/hidden.png" class="eyeicon" data-target="#confirm-password">
+                </div>
+            </div>
+            <div class="forgot">
+                <p class="forgot-left" style="margin-top:0px;">Sudah punya akun? <a href="login-page.html">Masuk</a></p>
+            </div>
+            <button class="sign">Daftar</button>
+            </form>
+            <p class="caption-1-medium">Atau</p>
+            <button type="button" class="google-sign-in-button">
+                Daftar dengan Google
+            </button>
+    </div>
+</body>
+<script>
+    document.querySelectorAll(".eyeicon").forEach(icon => {
+        icon.addEventListener("click", function () {
+            let targetInput = document.querySelector(this.getAttribute("data-target"));
+            if (targetInput.type === "password") {
+                targetInput.type = "text";
+                this.src = "./icon/eye.png";
+            } else {
+                targetInput.type = "password";
+                this.src = "./icon/hidden.png";
+            }
+        });
+    });
+</script>
+
+</html>

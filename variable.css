@@ -1,0 +1,274 @@
+:root {
+  /* Main Colors */
+  --color-primary: #3b82f6;
+  --color-primary-dark: #1e3a8a;
+  --color-primary-darker: #1c3aa9;
+  --color-primary-darkest: #1c2c7d;
+
+  /* Text Colors (Dark) */
+  --color-text-primary: #4b5563;
+  --color-text-secondary: #6b7280;
+  --color-text-disabled: #9ca3af;
+
+  /* Text Colors (Light) */
+  --color-text-primary-light: #e5e7eb;
+  --color-text-secondary-light: #f3f4f6;
+  --color-text-disabled-light: #f9fafb;
+
+  /* Other Backgrounds */
+  --color-paper-bg: #1f2937;
+  --color-body-bg: #111827;
+  --color-page-header-bg: #0f172a;
+  --color-extra-bg: #1f2937;
+
+  /* Borders and Inputs */
+  --color-outline-border: #e5e7eb;
+  --color-input-border: #f3f4f6;
+  --color-input-bg: #ffffff;
+
+  /* Info Colors */
+  --color-info-pressed: #1e40af;
+  --color-info-hover: #1d4ed8;
+  --color-info-default: #2563eb;
+  --color-info-bg: #dbeafe;
+
+  /* Success Colors */
+  --color-success-pressed: #4d7c0f;
+  --color-success-hover: #65a30d;
+  --color-success-default: #84cc16;
+  --color-success-bg: #ecfdf5;
+
+  /* Warning Colors */
+  --color-warning-pressed: #ca8a04;
+  --color-warning-hover: #fbbf24;
+  --color-warning-default: #facc15;
+  --color-warning-bg: #fef9c3;
+
+  /* Error Colors */
+  --color-error-pressed: #b91c1c;
+  --color-error-hover: #dc2626;
+  --color-error-default: #ef4444;
+  --color-error-bg: #fff7ed;
+
+  /* Greyscale */
+  --color-grey-900: #111827;
+  --color-grey-800: #1f2937;
+  --color-grey-700: #374151;
+  --color-grey-600: #4b5563;
+  --color-grey-500: #6b7280;
+  --color-grey-400: #9ca3af;
+  --color-grey-300: #d1d5db;
+  --color-grey-200: #e5e7eb;
+  --color-grey-100: #f3f4f6;
+  --color-grey-50: #f9fafb;
+
+  /* Fonts */
+  --font-family: "Lato", sans-serif;
+
+  /* Font Sizes */
+  --section-heading: 40px;
+  --fs-lg: 22px;
+  --fs-md: 17px;
+  --fs-sm: 14px;
+  --fs-x-sm: 12px;
+
+  --fw-7: 700;
+  --fw-6: 600;
+  --fw-5: 500;
+
+  --px: 120px;
+}
+
+.button {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.button:hover {
+  background-color: var(--color-info-hover);
+}
+
+button {
+  font-family: "Lato", sans-serif;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+button.unstyled {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+button.primary:hover {
+  background-color: #3740a3;
+}
+
+button.secondary {
+  background-color: #1f2937;
+  color: white;
+}
+
+button.secondary:hover {
+  background-color: #374151;
+}
+
+button.outline {
+  background-color: transparent;
+  border: 2px solid #1e3a8a;
+  color: #1e3a8a;
+}
+
+button.outline:hover {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+button.disabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.chip {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+}
+
+.chip.success {
+  background-color: #2563eb;
+}
+
+.chip.info {
+  background-color: #3b82f6;
+}
+
+.chip.warning {
+  background-color: #f59e0b;
+}
+
+.chip.error {
+  background-color: #ef4444;
+}
+
+.chip.disabled {
+  background-color: #d1d5db;
+  color: #9ca3af;
+}
+
+.checkbox {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: #1e3a8a;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1e3a8a;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+}
+
+.checkbox:checked::before {
+  content: "✓";
+  font-weight: bold;
+  color: white;
+  background-color: #1e3a8a;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.radio {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: #1e3a8a;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1e3a8a;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.radio:checked::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #1e3a8a;
+  display: inline-block;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e7eb;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #1e3a8a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.switch.disabled {
+  cursor: not-allowed;
+}
+
+.switch.disabled .slider {
+  background-color: #9ca3af;
+}
+
